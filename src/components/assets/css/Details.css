@@ -1,0 +1,32 @@
+.SelectList{
+    height: 40px;
+    box-sizing: border-box;
+    width: 50%;
+    margin: 0;
+    outline: 0;
+    line-height: normal;
+    border-radius: 3px;
+    border: 1px solid var(--gray2);
+    padding: 6px 12px;
+    color: var(--black2);
+    font-weight: 900;
+}
+.SelectList option{
+    color: var(--black2);
+    font-weight: 900;
+}
+
+.PriceSection{
+    padding: 3px 0px;
+    margin: 0 0 6px;
+    clear: both;
+    display: flex;
+    justify-content: space-around;
+}
+.PriceSection label{
+    font-size: 15px;
+    color: var(--black2);
+    display: block;
+    line-height: 2;
+    font-weight: 700;
+}

@@ -1,0 +1,69 @@
+.MainSecctionContact{
+    display: flex;
+}
+.ContactContent{
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.Contact-grid-column{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.Contact-row-container{
+    text-align: center;
+}
+.Contact-row-container table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.Contact-row-container td{
+    padding: 5px;
+    border: 1px solid #d3d3d3;
+}
+
+.button-contact-container{
+    width: 70px;
+    display: inline-block;
+    margin: 0 7px;
+}
+.button-contact-icon{
+    border: solid 1px transparent;
+    background-color: transparent;
+    font-size: 60px;
+    cursor: pointer;
+    color: var(--black);
+}
+.button-contact-icon:hover {
+    color: var(--pink);
+}
+.button-contact-icon p{
+    font-size: 12px;
+    margin: 0;
+    font-weight: bold;
+}
+@media only screen and (max-width: 767px) {
+    .ContactContent {
+        margin: 40px auto;
+    }
+}
+@media only screen and (max-width: 1024px) and (min-width: 767px) {
+    .ContactContent {
+        margin: 40px auto;
+        width: 70%;
+    }
+    .Contact-grid-column {
+        width: 100%;
+    }
+    .button-contact-container {
+        width: 110px;
+    }
+    .button-contact-icon {
+        font-size: 90px;
+    }
+    .button-contact-icon p {
+        font-size: 20px;
+    }
+}

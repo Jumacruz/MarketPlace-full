@@ -1,0 +1,216 @@
+:root {
+    --primary:rgb(0, 195, 255);
+    --primary-dark: rgb(0, 195, 255);
+    --secondary:hsl(25, 99%, 63%);
+    --secondary-dark: hsl(25, 99%, 60%);
+    --white:#f5f9fa;
+    --white2: #ebf3f5;
+    --gray:#e1e4e5;
+    --gray2:#eee;
+    --gray3:#4b4c4d;
+    --black:#323333;
+    --black2:#2a2b2b;
+    --red:#ff0000;
+    --red2: #ff2c2c;
+    --pink: #EE316C;
+}
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px auto 230px;
+    gap: 0px;
+}
+#root{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px auto 230px;
+    gap: 0px;
+}
+img{
+    height: 200px;
+    width: 100%;
+    background-color: var(--gray);
+}
+/*----header----*/
+.header{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    /* background-color: blanchedalmond;  */
+    border-bottom: 1px solid var(--gray2);
+}
+.Header-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.Flex-Boxes{
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+/* .Navar-Container{
+
+} */
+.ul-Container{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0 50px;
+    justify-content: center;
+    align-items: center;
+}
+.ul-Container li{
+    flex-basis: 0;
+    flex-grow: 1;
+}
+.ul-Container a{
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--black);
+}
+.ul-Container a:hover{
+    color: var(--pink);
+}
+.User-icon{
+    font-size: 30px;
+}
+/*----MainSecction----*/
+.MainSecction{
+    background-color: var(--white);;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* border-top: 1px solid #EFF1F6; */
+}
+/*----footer----*/
+.footer{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    /* background-color: aqua; */
+    border-top: 1px solid #EFF1F6;
+}
+.Footer-container{
+    display: flex;
+    height: 100%;
+    
+}
+.footer-ul{
+    list-style: none;
+    padding: 0;
+}
+.footer-ul li{
+    margin: 5px 0;
+}
+.footer-ul a{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    align-items: center;
+    color: var(--black);
+}
+.footer-ul a:hover{
+    color: var(--pink);
+}
+.button-fixed-container{
+    width: 70px;
+}
+.button-fixed-footer{
+    background-color: #00bb2d;
+    border: solid 1px #00bb2d;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    font-size: 30px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: var(--white);
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        grid-template-columns: 100%;
+        grid-template-rows: 130px auto 530px; 
+    }
+    .Header-container {
+        display: block;
+    }
+    .ul-Container {
+        padding: 0;
+    }
+    .Footer-container {
+        display: block;
+    }
+    .footer-ul li {
+        margin: 8px 0;
+    }
+    .Flex-Boxes-Footer h1{
+        margin: 35px 0 25px;
+    }
+}
+@media only screen and (max-width: 1024px) and (min-width: 767px) {
+    body {
+        grid-template-columns: 100%;
+        grid-template-rows: 200px auto 800px; 
+    }
+    .Header-container {
+        display: block;
+    }
+    .Flex-Title-Header{
+        font-size: 25px;
+    }
+    .ul-Container {
+        padding: 0;
+    }
+    .Navar-Container{
+        font-size: 30px;
+    }
+    .User-icon {
+        font-size: 35px;
+    }
+    .Footer-container {
+        display: block;
+    }
+    .footer-ul li {
+        margin: 18px 0;
+    }
+    .footer-ul a {
+        font-size: 25px;
+    }
+    .Flex-Boxes-Footer h1{
+        margin: 35px 0 25px;
+        font-size: 40px;
+    }
+    .button-fixed-footer {
+        height: 80px;
+        width: 80px;
+        font-size: 55px;
+    }
+    .Secction-H1 {
+        font-size: 40px;
+     }
+}
+
+
+
+@media only screen and (max-width: 767px) {
+
+}
+@media only screen and (max-width: 1023px) and (min-width: 767px) {
+    
+}

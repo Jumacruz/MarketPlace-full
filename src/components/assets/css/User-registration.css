@@ -1,0 +1,139 @@
+.ContactContent{
+   width: 30%;
+   margin: 30px auto;
+}
+.Registration-form{
+    padding: 25px;
+    width: 100%;
+}
+.form-title-wrap{
+    display: block;
+    border-bottom: 1px solid var(--gray2);
+    margin-bottom: 25px;
+    position: relative;
+    font-size: 18px;
+    color: var(--black2);
+}
+.form-title-wrap h2{
+    margin-bottom: -1px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--pink);
+    display: inline-block;  
+}
+.form-fields-container{
+    background: transparent;
+    width: 100%;
+    padding: 0;
+}
+.form-row{
+    padding: 3px 0px;
+    margin: 0 0 6px;
+    clear: both;
+}
+.form-row label{
+    font-size: 15px;
+    color: var(--black2);
+    display: block;
+    line-height: 2;
+    font-weight: 700;
+}
+.required{
+    color: var(--pink);
+}
+.input-text{
+    height: 40px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    outline: 0;
+    line-height: normal;
+    border-radius: 3px;
+    border: 1px solid var(--gray2);
+    padding: 6px 12px;
+    color: var(--black2);
+    font-weight: 900;
+}
+.password-input{
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+}
+.Button-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 3px 0px;
+    margin: 0 0 6px;
+}
+.Registration-Button{
+    background-color: var(--pink);
+    color: var(--white);
+    padding: 0px 15px;
+    line-height: 40px;
+    font-size: 16px ;
+    font-weight: 700;
+    margin: 0;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 0;
+}
+/* .Registration-Button:hover {
+    color: var(--black2);
+} */
+.Remind-me-checkbox{
+    margin: 0px;
+    display: inline;
+    font-size: 13px;
+    color: var(--black2);
+    line-height: 2;
+    font-weight: 700;
+}
+.Remind-me-checkbox:hover {
+    color: var(--pink);
+}
+.Remind-me-checkbox input{
+    margin: 0px 3px 0 0;
+    vertical-align: middle;
+    line-height: normal;
+    box-sizing: border-box;
+    padding: 0;
+}
+.Remind-me-checkbox span{
+    vertical-align: middle;
+    line-height: 1;
+}
+.lost-password-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0 0;
+}
+.lost-password-section a{
+    outline: 0;
+    color: var(--black2);
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 700;
+    line-height: 23px;
+}
+.lost-password-section a:hover{
+    color: var(--pink);
+}
+@media only screen and (max-width: 767px) {
+    .ContactContent {
+        width: 100%;
+        margin: 30px auto;
+    }
+}
+@media only screen and (max-width: 1024px) and (min-width: 767px) {
+    .ContactContent {
+        width: 60%;
+        margin: 30px auto;
+    }
+}
