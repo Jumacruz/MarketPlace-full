@@ -16,18 +16,22 @@ import ProductDetails from './components/new/ProductDetails';
 function App() {
   return (
     <>
-    <Header></Header>
+    <Header/>
     <Routes>
-      <Route path='/' element={<Homepage></Homepage>}/>
-      <Route path='/Directory' element={<Directory><StoreList></StoreList></Directory>}/>
-      <Route path='/Store' element={<Store><ProductList></ProductList></Store>}/>
-      <Route path='/Contact' element={<Contact></Contact>}/>
-      <Route path='/UserRegistration' element={<UserRegistration></UserRegistration>}/>
-      <Route path='/tiendas' element={<StoreDetails></StoreDetails>}/>
-      <Route path='/productos' element={<ProductDetails></ProductDetails>}/>
+      <Route path='/' element={<Homepage/>}/>
+      <Route path='/Directory' element={<Directory><StoreList/></Directory>}>
+        <Route path='/Directory:id' element={<h1>Not found</h1>}/>
+      </Route>
+      <Route path='/Store' element={<Store><ProductList/></Store>}>
+        <Route path='/Store:id' element={<h1>Not found</h1>}/>
+      </Route>
+      <Route path='/Contact' element={<Contact/>}/>
+      <Route path='/UserRegistration' element={<UserRegistration/>}/>
+      <Route path='/tiendas' element={<StoreDetails/>}/>
+      <Route path='/productos' element={<ProductDetails/>}/>
       <Route path='*' element={<h1>Not found</h1>}/>
     </Routes>
-    <Footer></Footer>
+    <Footer/>
     </>
   );
 }

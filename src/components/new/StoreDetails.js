@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from 'react';
 import { useNavigate } from 'react-router';
 import { ContextStore } from '../../services/MemoryStores';
-import '../assets/css/Details.css';
+import '../assets/css/Forms.css';
 import '../assets/css/User-registration.css';
 
 function StoreDetails() {
