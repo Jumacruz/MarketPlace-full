@@ -26,7 +26,7 @@ function StoreDetails() {
     const navigate = useNavigate();
 
     const cancel = async () => {
-        navigate('/UserRegistration');
+        navigate('/Directory');
     }
 
     const create = async () => {
@@ -40,7 +40,7 @@ function StoreDetails() {
         <section class="ContactContent">
             <section class="Registration-form">
                 <div class="form-title-wrap">
-                    <h2><i class="uil uil-store"></i>Crear tienda</h2>
+                    <h2><i class="uil uil-store"></i>Tienda</h2>
                 </div>
                 <form class="form-fields-container">
                     <div class="StoreName-section form-row">

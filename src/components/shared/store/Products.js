@@ -2,14 +2,13 @@ import '../../assets/css/Directory.css';
 import '../../assets/css/Store.css';
 import '../../assets/css/main.css';
 import '../../assets/css/fonts.css';
+import { Link } from 'react-router-dom';
 
-function Products({name, currency, PriceLabeled, PriceNormal, img, url }) {
+function Products({id, name, currency, PriceLabeled, PriceNormal, img}) {
     return ( 
-        <div class="products-unity">
+        <Link to={`/Store/${id}`} class="products-unity">
             <figure class="products-img-box">
-                <a href={url}>
-                    <img src={img}/>
-                </a>
+                <img src={img}/>
             </figure>
             <div class="products-single__content">
                 <div class="product-separator"></div>
@@ -26,10 +25,10 @@ function Products({name, currency, PriceLabeled, PriceNormal, img, url }) {
                     </ins>
                 </span>
                 <h3 class="product-name">
-                    <a href={url}>{name}</a>
+                    <a>{name}</a>
                 </h3>
             </div>
-        </div>
+        </Link>
      );
 }
 

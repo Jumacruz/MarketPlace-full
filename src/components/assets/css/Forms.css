@@ -1,3 +1,25 @@
+.fixed{
+    position: fixed;
+}
+.inset-0{
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+.ModalBody{
+    background-color: rgba(107,114,128,0.75);
+}
+.ModalBody>.ContactContent{
+    background-color: var(--white);
+    border-radius: 40px;
+    margin: 0px auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+}
+
 .SelectList{
     height: 40px;
     box-sizing: border-box;
@@ -29,4 +51,15 @@
     display: block;
     line-height: 2;
     font-weight: 700;
+}
+
+@media only screen and (max-width: 767px){
+    .ModalBody>.ContactContent {
+        width: 85%;
+    }
+}
+@media only screen and (max-width: 1024px) and (min-width: 767px){
+    .ModalBody>.ContactContent {
+        width: 75%;
+    }
 }

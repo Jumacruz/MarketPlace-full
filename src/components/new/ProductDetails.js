@@ -4,7 +4,7 @@ import { ContextProducts } from '../../services/MemoryProducts';
 import '../assets/css/Forms.css';
 import '../assets/css/User-registration.css';
 
-function StoreDetails() {
+function ProductDetails() {
     const [form, setForm]= useState({
         "name": "",
         "category":"",
@@ -29,7 +29,7 @@ function StoreDetails() {
     const navigate = useNavigate();
 
     const cancel = async () => {
-        navigate('/UserRegistration');
+        navigate('/Store');
     }
     
     const create = async () => {
@@ -43,7 +43,7 @@ function StoreDetails() {
         <section class="ContactContent">
             <section class="Registration-form">
                 <div class="form-title-wrap">
-                    <h2><i class="uil uil-box"></i>Agregar producto</h2>
+                    <h2><i class="uil uil-box"></i>Producto</h2>
                 </div>
                 <form class="form-fields-container">
                     <div class="ProductName-section form-row">
@@ -80,4 +80,4 @@ function StoreDetails() {
      );
 }
 
-export default StoreDetails;
+export default ProductDetails;

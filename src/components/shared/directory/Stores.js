@@ -2,19 +2,18 @@ import '../../assets/css/Directory.css';
 import '../../assets/css/Store.css';
 import '../../assets/css/main.css';
 import '../../assets/css/fonts.css';
+import { Link } from 'react-router-dom';
 
-function Stores({name, category, views, img, url, CategoryUrl}) {
+function Stores({id, name, category, views, img, CategoryUrl}) {
     return ( 
-        <div class="directory-unity">
+        <Link to={`/Directory/${id}`} class="directory-unity">
             <figure class="directory-img-box">
-                <a href={url}>
-                    <img src={img}/>
-                </a>
+                <img src={img}/>
             </figure>
             <div class="directory-single__content" >
                 <div class="directory-single__info">
                     <div class="directory-info--top">
-                        <h4 class="directory-title"><a href={url}>{name}</a></h4>
+                        <h4 class="directory-title"><a>{name}</a></h4>
                     </div>
                 </div>
                 <div class="directory-single__meta">
@@ -30,7 +29,7 @@ function Stores({name, category, views, img, url, CategoryUrl}) {
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
      );
 }
 
