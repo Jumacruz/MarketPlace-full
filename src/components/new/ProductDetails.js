@@ -1,10 +1,14 @@
 import { useEffect, useState, useContext } from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import { ContextProducts } from '../../services/MemoryProducts';
 import '../assets/css/Forms.css';
 import '../assets/css/User-registration.css';
 
 function ProductDetails() {
+
+    const {id} = useParams();
+    console.log(id)
+
     const [form, setForm]= useState({
         "name": "",
         "category":"",
@@ -22,18 +26,30 @@ function ProductDetails() {
         setForm(estate => ({...estate, [prop]: event.target.value}));
     }
 
-    useEffect(() => {
-        // console.log(form);
-    }, [form]);
-
     const navigate = useNavigate();
 
-    const cancel = async () => {
+    useEffect(() => {
+        const StoreMemory = state.objects[id];
+        if (!id) return;
+        if(!StoreMemory){
+            return navigate('/Directory')
+        }
+        //setForm(StoreMemory);
+    }, [id]);
+    
+    const create = () => {
+        dispatch({type: 'create', item: form });
         navigate('/Store');
     }
-    
-    const create = async () => {
-        dispatch({type: 'create', item: form });
+    const update = () => {
+        dispatch({type: 'update', item: form });
+        navigate('/Store');
+    }
+    const erase = () => {
+        dispatch({type: 'erase', id });
+        navigate('/Store');
+    }
+    const cancel = () => {
         navigate('/Store');
     }
 
@@ -71,7 +87,9 @@ function ProductDetails() {
                         <input  class="input-text" value={img} onChange={e => onChange(e,'img')} type="file" accept="image/*" name="imagen" id="StoreImg"/>
                     </form>
                     <div class="Button-section">
-                        <button  class="Registration-Button" onClick={create}>Crear</button>
+                        {!id &&<button  class="Registration-Button" onClick={create}>Crear</button>}
+                        {id && <button  class="Registration-Button" onClick={update}>Actualizar</button>}
+                        {id && <button  class="Registration-Button EraseButton" onClick={erase}>Borrar</button>}
                         <button  class="Registration-Button" onClick={cancel}>Cancelar</button>
                     </div>
                 </form>

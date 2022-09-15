@@ -4,7 +4,7 @@ import '../../assets/css/Forms.css';
 import { ContextStore } from "../../../services/MemoryStores";
 import StoreDetails from "../../new/StoreDetails";
 
-function ModalDirectory() {
+function ModalStore() {
     const {id} = useParams();
     const [state, dispatch] = useContext(ContextStore);
     return(
@@ -15,4 +15,4 @@ function ModalDirectory() {
     );
 }
 
-export default ModalDirectory;
+export default ModalStore;

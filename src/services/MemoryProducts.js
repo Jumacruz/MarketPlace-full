@@ -63,6 +63,25 @@ function reductor(state, action) {
             };
             return newState;
         };
+        case 'update': {
+            const id = action.item.id;
+            state.objects[id] = {
+                ...state.objects[id],
+                ...action.item
+            };
+            const newState = { ...state };
+            return newState;
+        };
+        case 'erase': {
+            const id = action.id;
+            const newOrder = state.order.filter(item => item !== id);
+            delete state.objects[id];
+            const newState = { 
+                order: newOrder,
+                objects: state.objects
+            };
+            return newState;
+        };
     }
 }
 const MetaList = reductor(InitialState, {type: 'place', items: MetaProductsList});

@@ -12,8 +12,8 @@ import StoreList from './components/shared/directory/StoreList';
 import ProductList from './components/shared/store/ProductList';
 import StoreDetails from './components/new/StoreDetails';
 import ProductDetails from './components/new/ProductDetails';
-import ModalDirectory from './components/shared/directory/ModalDirectory';
-import ModalStore from './components/shared/store/ModalStore';
+import Modal from './components/shared/Modal';
+
 
 
 function App() {
@@ -23,10 +23,10 @@ function App() {
     <Routes>
       <Route path='/' element={<Homepage/>}/>
       <Route path='/Directory' element={<Directory><StoreList/></Directory>}>
-        <Route path='/Directory/:id' element={<ModalDirectory/>}/>
+        <Route path='/Directory/:id' element={<Modal><StoreDetails/></Modal>}/>
       </Route>
       <Route path='/Store' element={<Store><ProductList/></Store>}>
-        <Route path='/Store/:id' element={<ModalStore/>}/>
+        <Route path='/Store/:id' element={<Modal><ProductDetails/></Modal>}/>
       </Route>
       <Route path='/Contact' element={<Contact/>}/>
       <Route path='/UserRegistration' element={<UserRegistration/>}/>
