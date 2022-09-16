@@ -1,6 +1,6 @@
 import { createContext, useReducer } from "react";
-import landscape from '../components/assets/img/landscape.jpg';
-
+// import landscape from '../components/assets/img/landscape.jpg';
+// import landscape from '../../public/products.json';
 // const MetaProductsList = [
 //     {
 //         "id":"1",
@@ -37,18 +37,18 @@ import landscape from '../components/assets/img/landscape.jpg';
 //     }
 // ];
 
-// const InitialState = {
-//     order: [],
-//     objects: {}
-// };
+const InitialState = {
+    order: [],
+    objects: {}
+};
 
-const memory = localStorage.getItem('items')
-const InitialState = memory
-    ? JSON.parse(memory)
-    : {
-        order: [],
-        objects: {}
-    };
+// const memory = localStorage.getItem('items')
+// const InitialState = 
+//     memory ? JSON.parse(memory)
+//     : {
+//         order: [],
+//         objects: {}
+//     };
 
 function reductor(state, action) {
     switch (action.type) {
@@ -58,7 +58,7 @@ function reductor(state, action) {
                 order: items.map(item => item.id),
                 objects: items.reduce((object, item) => ({...object, [item.id]: item}), {})
             };
-            localStorage.setItem('items', JSON.stringify(newState))
+            // localStorage.setItem('items', JSON.stringify(newState))
             return newState;
         };
         case 'create': {
@@ -70,7 +70,7 @@ function reductor(state, action) {
                     [id]: action.item
                 }
             };
-            localStorage.setItem('items', JSON.stringify(newState))
+            // localStorage.setItem('items', JSON.stringify(newState))
             return newState;
         };
         case 'update': {
@@ -80,7 +80,7 @@ function reductor(state, action) {
                 ...action.item
             };
             const newState = { ...state };
-            localStorage.setItem('items', JSON.stringify(newState))
+            // localStorage.setItem('items', JSON.stringify(newState))
             return newState;
         };
         case 'erase': {
@@ -91,7 +91,7 @@ function reductor(state, action) {
                 order: newOrder,
                 objects: state.objects
             };
-            localStorage.setItem('items', JSON.stringify(newState))
+            // localStorage.setItem('items', JSON.stringify(newState))
             return newState;
         };
         default:
