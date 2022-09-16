@@ -20,6 +20,11 @@
     -webkit-transform: translate(-50%, -50%);
 }
 
+.EraseButton{
+    background-color: var(--red);
+    border-radius: 15px;
+}
+
 .SelectList{
     height: 40px;
     box-sizing: border-box;

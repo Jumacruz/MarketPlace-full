@@ -94,11 +94,13 @@ function reductor(state, action) {
             localStorage.setItem('items', JSON.stringify(newState))
             return newState;
         };
+        default:
+            throw new Error();
     }
 }
 
 // const MetaList = reductor(InitialState, {type: 'place', items: MetaProductsList});
-//  reductor(InitialState, {type: 'place', items: MetaProductsList});
+// reductor(InitialState, {type: 'place', items: MetaProductsList});
 
 export const ContextProducts = createContext(null);
 

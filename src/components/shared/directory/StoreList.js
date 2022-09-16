@@ -4,7 +4,7 @@ import { ContextStore } from "../../../services/MemoryStores";
 import { Outlet } from "react-router";
 
 function StoreList() {
-    const [state, dispatch] = useContext(ContextStore);
+    const [state] = useContext(ContextStore);
     return ( 
         <>
             {state.order.map(id=> <Stores key={id} {...state.objects[id]}></Stores>)}

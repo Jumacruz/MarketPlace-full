@@ -1,11 +1,17 @@
 .MainSecctionContact{
     display: flex;
 }
-.ContactContent{
+.ContactContentBox{
     position: relative;
-    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    margin: 30px auto;
+}
+.ContactContent{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px auto;
 }
 .Contact-grid-column{
     margin-left: 10px;
@@ -45,11 +51,18 @@
     font-weight: bold;
 }
 @media only screen and (max-width: 767px) {
+    .ContactContentBox {
+        margin: 40px auto;
+    }
     .ContactContent {
         margin: 40px auto;
     }
 }
 @media only screen and (max-width: 1024px) and (min-width: 767px) {
+    .ContactContentBox {
+        margin: 40px auto;
+        width: 70%;
+    }
     .ContactContent {
         margin: 40px auto;
         width: 70%;

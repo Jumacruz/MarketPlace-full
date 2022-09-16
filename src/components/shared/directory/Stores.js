@@ -6,25 +6,25 @@ import { Link } from 'react-router-dom';
 
 function Stores({id, name, category, views, img, CategoryUrl}) {
     return ( 
-        <Link to={`/Directory/${id}`} class="directory-unity">
-            <figure class="directory-img-box">
+        <Link to={`/Directory/${id}`} className="directory-unity">
+            <figure className="directory-img-box">
                 <img src={img}/>
             </figure>
-            <div class="directory-single__content" >
-                <div class="directory-single__info">
-                    <div class="directory-info--top">
-                        <h4 class="directory-title"><a>{name}</a></h4>
+            <div className="directory-single__content" >
+                <div className="directory-single__info">
+                    <div className="directory-info--top">
+                        <h4 className="directory-title"><a>{name}</a></h4>
                     </div>
                 </div>
-                <div class="directory-single__meta">
-                    <div class="directory-single__meta--left">
-                        <div class="directory-category">
+                <div className="directory-single__meta">
+                    <div className="directory-single__meta--left">
+                        <div className="directory-category">
                             <a href={CategoryUrl}>{category}</a>
                         </div>       
                     </div>
-                    <div class="directory-single__meta--right">
-                        <div class="directory-view-count">
-                            <i class="uil uil-eye"></i><span class="eye-count">{views}</span>
+                    <div className="directory-single__meta--right">
+                        <div className="directory-view-count">
+                            <i className="uil uil-eye"></i><span className="eye-count">{views}</span>
                         </div>
                     </div>
                 </div>

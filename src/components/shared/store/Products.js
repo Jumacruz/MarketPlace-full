@@ -6,25 +6,25 @@ import { Link } from 'react-router-dom';
 
 function Products({id, name, currency, PriceLabeled, PriceNormal, img}) {
     return ( 
-        <Link to={`/Store/${id}`} class="products-unity">
-            <figure class="products-img-box">
+        <Link to={`/Store/${id}`} className="products-unity">
+            <figure className="products-img-box">
                 <img src={img}/>
             </figure>
-            <div class="products-single__content">
-                <div class="product-separator"></div>
-                <span class="price">
+            <div className="products-single__content">
+                <div className="product-separator"></div>
+                <span className="price">
                     <del>
-                        <span class="Price-labeled">
-                        <span class="Price-currencySymbol">{currency}</span>
+                        <span className="Price-labeled">
+                        <span className="Price-currencySymbol">{currency}</span>
                         {PriceLabeled}</span>
                     </del> 
                     <ins>
-                        <span class="Price-normal">
-                        <span class="Price-currencySymbol">{currency}</span>
+                        <span className="Price-normal">
+                        <span className="Price-currencySymbol">{currency}</span>
                         {PriceNormal}</span>
                     </ins>
                 </span>
-                <h3 class="product-name">
+                <h3 className="product-name">
                     <a>{name}</a>
                 </h3>
             </div>

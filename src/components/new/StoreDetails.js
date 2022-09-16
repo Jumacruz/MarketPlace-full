@@ -25,15 +25,16 @@ function StoreDetails() {
 
     const navigate = useNavigate();
 
+    const StoreMemory = state.objects[id];
+
     useEffect(() => {
-        const StoreMemory = state.objects[id];
         if (!id) return;
         if(!StoreMemory){
             return navigate('/Directory')
         }
         //setForm(StoreMemory);
-    }, [id]);
-
+    }, [id, StoreMemory, navigate]);
+ 
     const create = () => {
         dispatch({type: 'create', item: form });
         navigate('/Directory');
@@ -53,31 +54,31 @@ function StoreDetails() {
     const CategoriesOptions = ["Comida", "Ropa", "Salud", "Tecnología", "Hogar", "Servicios"];
 
     return (
-        <section class="ContactContent">
-            <section class="Registration-form">
-                <div class="form-title-wrap">
-                    <h2><i class="uil uil-store"></i>Tienda</h2>
+        <section className="ContactContent">
+            <section className="Registration-form">
+                <div className="form-title-wrap">
+                    <h2><i className="uil uil-store"></i>Tienda</h2>
                 </div>
-                <form class="form-fields-container">
-                    <div class="StoreName-section form-row">
-                        <label for="StoreName">Nombre de la tienda <span class="required">*</span></label>
-                        <input class="input-text" value={name} onChange={e => onChange(e,'name')} type="text" name="StoreName" id="StoreName" placeholder='ej. TiendasDeSanJose' required></input>
+                <form className="form-fields-container">
+                    <div className="StoreName-section form-row">
+                        <label for="StoreName">Nombre de la tienda <span className="required">*</span></label>
+                        <input className="input-text" value={name} onChange={e => onChange(e,'name')} type="text" name="StoreName" id="StoreName" placeholder='ej. TiendasDeSanJose' required></input>
                     </div>
-                    <div class="Category-section form-row">
-                        <label for="StoreCategory">Categoría<span class="required">*</span></label>
-                            <select class="SelectList" value={category} onChange={e => onChange(e,'category')} type="text" name="StoreCategory" id="StoreCategory" required>
-                                {CategoriesOptions.map(option => <option value={option}>{option}</option>)}
+                    <div className="Category-section form-row">
+                        <label for="StoreCategory">Categoría<span className="required">*</span></label>
+                            <select className="SelectList" value={category} onChange={e => onChange(e,'category')} type="text" name="StoreCategory" id="StoreCategory" required>
+                                {CategoriesOptions.map(option => <option key={option} value={option}>{option}</option>)}
                             </select>
                     </div>
-                    <form class="ImgSection form-row" name="UploadImages" type="POST" enctype="multipart/formdata">
+                    <form className="ImgSection form-row" name="UploadImages" type="POST" enctype="multipart/formdata">
                         <label for="StoreImg">Imagen / logo</label>
-                        <input  class="input-text" value={img} onChange={e => onChange(e,'img')} type="file" accept="image/*" name="imagen" id="StoreImg"/>
+                        <input  className="input-text" value={img} onChange={e => onChange(e,'img')} type="file" accept="image/*" name="imagen" id="StoreImg"/>
                     </form>
-                    <div class="Button-section">
-                        {!id &&<button  class="Registration-Button" onClick={create}>Crear</button>}
-                        {id && <button  class="Registration-Button" onClick={update}>Actualizar</button>}
-                        {id && <button  class="Registration-Button EraseButton" onClick={erase}>Borrar</button>}
-                        <button  class="Registration-Button" onClick={cancel}>Cancelar</button>
+                    <div className="Button-section">
+                        {!id &&<button  className="Registration-Button" onClick={create}>Crear</button>}
+                        {id && <button  className="Registration-Button" onClick={update}>Actualizar</button>}
+                        {id && <button  className="Registration-Button EraseButton" onClick={erase}>Borrar</button>}
+                        <button  className="Registration-Button" onClick={cancel}>Cancelar</button>
                     </div>
                 </form>
             </section>

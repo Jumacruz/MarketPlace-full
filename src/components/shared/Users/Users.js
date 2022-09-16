@@ -1,15 +1,15 @@
 
 function Users({ UserName, password }) {
     return ( 
-        <div class="products-unity">
-            <figure class="products-img-box">
+        <div className="products-unity">
+            <figure className="products-img-box">
                 <a href={url}>
                     <img src={img}/>
                 </a>
             </figure>
-            <div class="products-single__content">
-                <div class="product-separator"></div>
-                <h3 class="product-name">
+            <div className="products-single__content">
+                <div className="product-separator"></div>
+                <h3 className="product-name">
                     {UserName}
                 </h3>
             </div>

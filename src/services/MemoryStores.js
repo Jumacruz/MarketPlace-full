@@ -87,6 +87,8 @@ function reductor(state, action) {
             // localStorage.setItem('items', JSON.stringify(newState))
             return newState;
         };
+        default:
+            throw new Error();
     }
 }
 

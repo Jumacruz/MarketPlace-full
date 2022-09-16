@@ -4,50 +4,50 @@ import '../assets/css/Contact.css';
 
 function Contact () {
     return (
-        <main class="MainSecction MainSecctionContact">
-            <section class="ContactContent">
-                <section class="Contact-grid-column">
-                        <div class="Contact-row-container">
+        <main className="MainSecction MainSecctionContact">
+            <section className="ContactContentBox">
+                <section className="Contact-grid-column">
+                        <div className="Contact-row-container">
                             <table>
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <div class="button-contact-container">
+                                            <div className="button-contact-container">
                                                 <form method="get" action="#">
-                                                    <button type="submit" class="button-contact-icon"><i class="uil uil-calendar-alt"></i><p>citas</p></button>
+                                                    <button type="submit" className="button-contact-icon"><i className="uil uil-calendar-alt"></i><p>citas</p></button>
                                                 </form>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <div class="button-contact-container">
+                                            <div className="button-contact-container">
                                                 <form method="get" action="#">
-                                                    <button type="submit" class="button-contact-icon"><i class="uil uil-shield-check"></i><p>garantía</p></button>
+                                                    <button type="submit" className="button-contact-icon"><i className="uil uil-shield-check"></i><p>garantía</p></button>
                                                 </form>
                                             </div>
-                                            <div class="button-contact-container">
+                                            <div className="button-contact-container">
                                                 <form method="get" action="#">
-                                                    <button type="submit" class="button-contact-icon"><i class="uil uil-location-point"></i><p>Centros de servicio</p></button>
+                                                    <button type="submit" className="button-contact-icon"><i className="uil uil-location-point"></i><p>Centros de servicio</p></button>
                                                 </form>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <div class="button-contact-container">
+                                            <div className="button-contact-container">
                                                 <form method="get" action="#">
-                                                    <button type="submit" class="button-contact-icon"><i class="uil uil-phone"></i><p>teléfono</p></button>
+                                                    <button type="submit" className="button-contact-icon"><i className="uil uil-phone"></i><p>teléfono</p></button>
                                                 </form>
                                             </div>
-                                            <div class="button-contact-container">
+                                            <div className="button-contact-container">
                                                 <form method="get" action="#">
-                                                    <button type="submit" class="button-contact-icon"><i class="uil uil-envelope"></i><p>correo electrónico</p></button>
+                                                    <button type="submit" className="button-contact-icon"><i className="uil uil-envelope"></i><p>correo electrónico</p></button>
                                                 </form>
                                             </div>
-                                            <div class="button-contact-container">
+                                            <div className="button-contact-container">
                                                 <form method="get" action="#">
-                                                    <button  type="submit" class="button-contact-icon"><i class="uil uil-whatsapp"></i><p>whatsapp</p></button>
+                                                    <button  type="submit" className="button-contact-icon"><i className="uil uil-whatsapp"></i><p>whatsapp</p></button>
                                                 </form>
                                             </div>
                                         </td>
